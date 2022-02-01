@@ -1,5 +1,4 @@
 name: Docker Image CI
-
 on:
   push:
     branches: [ master ]
@@ -13,3 +12,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag power-monitor-api:latest
+    - name: list containers
+      run: microk8s kubectl get pods -n power-monitor
