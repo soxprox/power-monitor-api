@@ -41,3 +41,9 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+    
+    - name: create deployment
+      run: microk8s kubectl create deploy power-monitor-api --image=ghcr.io/soxprox/power-monitor-api:master -n power-monitor
+
+    - name: explose deployment with load balancer
+      run: microk8s kubectl expose deploy power-monitor-api --port=80 --containerPort=3000 --type=LoadBalancer -n power-montitor
