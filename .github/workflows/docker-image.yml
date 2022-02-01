@@ -46,4 +46,4 @@ jobs:
       run: microk8s kubectl create deploy power-monitor-api --image=ghcr.io/soxprox/power-monitor-api:master -n power-monitor
 
     - name: explose deployment with load balancer
-      run: microk8s kubectl expose deploy power-monitor-api --port=80 --containerPort=3000 --type=LoadBalancer -n power-montitor
+      run: microk8s kubectl expose deploy power-monitor-api --port=80 --target-port=3000 --type=LoadBalancer -n power-montitor
