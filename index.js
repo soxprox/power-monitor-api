@@ -44,6 +44,10 @@ const recordTime = async (time) => {
   kwh = ((60 * 60) / secondsDifference) / 1000
 }
 
+app.get('/', (req, res) => {
+  res.send(new Date() + " - API is up")
+})
+
 app.post('/pulse', jsonParser, async function (req, res) {
   if(req.headers.key == process.env.API_KEY) {
     console.log(req.body)
