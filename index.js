@@ -19,7 +19,7 @@ var app = express()
 var jsonParser = bodyParser.json()
 
 let pricePerKWH = 19.57
-let kwh = 99;
+let kwh = 0;
 let lastTime = 0;
 let currentTime = 0;
 let secondsDifference = 0;
