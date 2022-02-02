@@ -19,11 +19,12 @@ spec:
     metadata:
       labels:
         app: power-monitor-api
-        date: "{{ now | unixEpoch }}"
+        date: {{ now | unixEpoch }}
     spec:
       containers:
       - name: power-monitor-api
         image: ghcr.io/soxprox/power-monitor-api:master
+        imagePullPolicy: Always
         ports:
         - name: port3000
           containerPort: 3000
