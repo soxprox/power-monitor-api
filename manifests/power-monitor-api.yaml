@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: power-monitor-api
-        image: ghcr.io/soxprox/power-monitor-api:master -n power-monitor
+        image: ghcr.io/soxprox/power-monitor-api:latest
         ports:
         - name: port3000
           containerPort: 3000
