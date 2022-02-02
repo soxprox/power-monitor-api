@@ -19,7 +19,6 @@ spec:
     metadata:
       labels:
         app: power-monitor-api
-        date: {{ now | unixEpoch }}
     spec:
       containers:
       - name: power-monitor-api
