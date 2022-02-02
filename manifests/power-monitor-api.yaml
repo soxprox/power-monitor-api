@@ -24,9 +24,9 @@ spec:
       - name: power-monitor-api
         image: ghcr.io/soxprox/power-monitor-api:master -n power-monitor
         ports:
-        - name: rest-api-port-3000
+        - name: port3000
           containerPort: 3000
-        - name: ws-port-3001
+        - name: port3001
           containerPort: 3001
 ---
 apiVersion: v1
@@ -36,10 +36,10 @@ metadata:
   namespace: power-monitor
 spec:
   ports:
-  - name: rest-api-port-3000
+  - name: port3000
     port: 3000
     targetPort: 3000
-  - name: ws-port-3001
+  - name: port3001
     port: 3001
     targetPort: 3001
   selector:
