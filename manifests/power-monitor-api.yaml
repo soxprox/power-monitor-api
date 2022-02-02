@@ -28,6 +28,9 @@ spec:
           containerPort: 3000
         - name: port3001
           containerPort: 3001
+        envFrom:
+        - secretRef:
+            name: power-monitor-api-secret
 ---
 apiVersion: v1
 kind: Service
