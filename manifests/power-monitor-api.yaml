@@ -49,3 +49,4 @@ spec:
   selector:
     app: power-monitor-api
   type: LoadBalancer
+
