@@ -11,7 +11,7 @@ const url = process.env.MONGO_DB_URL;
 const client = new MongoClient(url);
 
 // Database Name
-const dbName = process.env.MONGO_DB_URL;
+const dbName = process.env.MONGO_DB_NAME;
 
 var app = express()
 
